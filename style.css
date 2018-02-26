@@ -1,0 +1,133 @@
+body{
+  text-align: center;
+}
+
+div{
+  margin-bottom: 5em;
+}
+
+h1{
+  margin-bottom: 4em;
+}
+
+.tooltip{
+  display: inline-block;
+  position: relative;
+  text-decoration: underline;
+}
+
+.top .toolextra::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: black transparent transparent transparent;
+}
+
+.tooltip:hover .toolextra{
+  visibility: visible;
+  opacity: 1;
+}
+
+.tooltip .toolextra{
+  opacity: 0;
+  transition: opacity 3s ease-in-out;
+}
+
+.top .toolextra{
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 150%;
+  left: 50%;
+  margin-left: -60px;
+}
+
+
+.right .toolextra{
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  left: 150%;
+  top: 0;
+}
+
+.right .toolextra::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+    right: 100%; /* To the left of the tooltip */
+    margin-top: -5px;
+    border-width: 5px;
+  border-style: solid;
+  border-color: transparent black transparent transparent;
+}
+
+
+.bottom .toolextra{
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  top: 150%;
+  margin-left: -60px;
+}
+
+.bottom .toolextra::after {
+  content: "";
+  position: absolute;
+    bottom: 100%;
+    left: 50%; /* To the left of the tooltip */
+    margin-left: -5px;
+    border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent black transparent;
+}
+
+.left .toolextra{
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  right: 150%;
+  top: -10%;
+   
+}
+
+.left .toolextra::after {
+  content: "";
+  position: absolute;
+    left: 100%;
+    top: 50%; /* To the left of the tooltip */
+    margin-top: -5px;
+    border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent transparent black;
+}
+
+ 
